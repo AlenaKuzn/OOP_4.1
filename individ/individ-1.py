@@ -3,12 +3,8 @@
 
 class Time:
     def __init__(self, hours, minutes):
-        if not isinstance(hours, int) or not isinstance(minutes, int):
-            raise ValueError()
-        if hours < 0 or minutes < 0:
-            raise ValueError()
-        self.first = hours
-        self.second = minutes
+        self.hous = hours
+        self.min = minutes
 
     def read(self):
         hours = int(input("Введите часы: "))
@@ -16,7 +12,7 @@ class Time:
         self.__init__(hours, minutes)
 
     def display(self):
-        print(self.first * 60 + self.second)
+        print(self.hous * 60 + self.min)
 
 
 if __name__ == '__main__':
